@@ -1,0 +1,17 @@
+{
+  "protocol": "paper56_retrain",
+  "scenes": ["parallel", "tilted", "stepped", "curved"],
+  "repeats": 3,
+  "baseline_methods": ["bom", "robomorph_llm", "text2robot_ea", "transform2act"],
+  "ablation_methods": ["fixed", "random_rod_bo", "global_bo"],
+  "optional_methods": ["fixed_pair_2d"],
+  "controller_mode": "retrain",
+  "observation_dim": 56,
+  "action_dim": 4,
+  "rod_scale_bounds": [0.9, 1.1],
+  "candidate_budget": 8,
+  "ppo_steps_per_candidate": 3000000,
+  "search_rollouts": 6,
+  "confirmation_rollouts": 10,
+  "fixed_pair": [0, 1]
+}

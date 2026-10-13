@@ -1,0 +1,146 @@
+{
+  "scene": "stepped",
+  "rod_length_scales": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "rod_lengths_m": [
+    0.8544003745317532,
+    0.8544003745317532,
+    0.8,
+    0.8,
+    0.8544003745317532,
+    0.8544003745317532,
+    0.8,
+    0.8
+  ],
+  "bottom_m": 0.02999999999999997,
+  "top_m": 1.73,
+  "right_wall_sections": [
+    {
+      "name": "wall_right",
+      "start_xz_m": [
+        1.7149999999999999,
+        0.0
+      ],
+      "end_xz_m": [
+        1.7149999999999999,
+        2.1
+      ],
+      "box_center_xyz_m": [
+        1.8399999999999999,
+        0.0,
+        1.05
+      ],
+      "box_halfsize_xyz_m": [
+        0.125,
+        2.0,
+        1.05
+      ],
+      "box_euler_xyz_deg": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "wall_right_step_01",
+      "start_xz_m": [
+        1.6649999999999998,
+        2.1
+      ],
+      "end_xz_m": [
+        1.6649999999999998,
+        2.7
+      ],
+      "box_center_xyz_m": [
+        1.7899999999999998,
+        0.0,
+        2.4000000000000004
+      ],
+      "box_halfsize_xyz_m": [
+        0.125,
+        2.0,
+        0.30000000000000004
+      ],
+      "box_euler_xyz_deg": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "wall_right_step_02",
+      "start_xz_m": [
+        1.6149999999999998,
+        2.7
+      ],
+      "end_xz_m": [
+        1.6149999999999998,
+        3.3
+      ],
+      "box_center_xyz_m": [
+        1.7399999999999998,
+        0.0,
+        3.0
+      ],
+      "box_halfsize_xyz_m": [
+        0.125,
+        2.0,
+        0.2999999999999998
+      ],
+      "box_euler_xyz_deg": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "wall_right_step_03",
+      "start_xz_m": [
+        1.565,
+        3.3
+      ],
+      "end_xz_m": [
+        1.565,
+        10.0
+      ],
+      "box_center_xyz_m": [
+        1.69,
+        0.0,
+        6.65
+      ],
+      "box_halfsize_xyz_m": [
+        0.125,
+        2.0,
+        3.35
+      ],
+      "box_euler_xyz_deg": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "active_actuator_ids": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "gravity": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "model_sha256": "e217007da8009924ce24a164cf5c971bc6765dfb98f1e12582300252956a711f",
+  "original_scene_xml_recovered": false,
+  "initialization": "Existing physical robot rod lengths; not manuscript equal-rod 45-degree formula",
+  "official_result": false
+}

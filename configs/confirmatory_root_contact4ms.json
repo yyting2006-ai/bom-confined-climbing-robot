@@ -1,0 +1,21 @@
+{
+  "protocol": "bom_confirmatory_root_contact4ms_v1",
+  "scenes": ["parallel", "tilted", "stepped", "curved"],
+  "repeats": 3,
+  "baseline_methods": ["bom"],
+  "ablation_methods": ["fixed", "random_rod_bo", "global_bo"],
+  "optional_methods": [],
+  "controller_mode": "retrain",
+  "observation_dim": 56,
+  "action_dim": 4,
+  "rod_scale_bounds": [0.9, 1.1],
+  "candidate_budget": 8,
+  "ppo_steps_per_candidate": 3000000,
+  "parallel_envs": 4,
+  "search_rollouts": 6,
+  "confirmation_rollouts": 10,
+  "fixed_pair": [0, 1],
+  "seed_namespace_offset": 0,
+  "environment": {"action_repeat": 20, "horizon_raw_steps": 4500, "target_gain_m": 1.0, "discount": 0.99, "reward_height": "root"},
+  "physics": {"timestep_s": 0.002, "solref": [0.004, 1], "solimp": [0.95, 0.99, 0.001], "iterations": 100, "tolerance": 1e-10}
+}

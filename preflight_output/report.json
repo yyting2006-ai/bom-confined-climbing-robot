@@ -1,0 +1,39 @@
+{
+  "status": "SOFTWARE_PREFLIGHT_ONLY_NOT_EXPERIMENT_RESULTS",
+  "scenes": [
+    {
+      "scene": "parallel",
+      "steps": 225,
+      "observation_dim": 56,
+      "action_dim": 4,
+      "velocity_reward_verified": true,
+      "inactive_actuators_zero": true
+    },
+    {
+      "scene": "tilted",
+      "steps": 225,
+      "observation_dim": 56,
+      "action_dim": 4,
+      "velocity_reward_verified": true,
+      "inactive_actuators_zero": true
+    },
+    {
+      "scene": "stepped",
+      "steps": 225,
+      "observation_dim": 56,
+      "action_dim": 4,
+      "velocity_reward_verified": true,
+      "inactive_actuators_zero": true
+    },
+    {
+      "scene": "curved",
+      "steps": 225,
+      "observation_dim": 56,
+      "action_dim": 4,
+      "velocity_reward_verified": true,
+      "inactive_actuators_zero": true
+    }
+  ],
+  "ppo_training_steps": 0,
+  "api_calls": 0
+}

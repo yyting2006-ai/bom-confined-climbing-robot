@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="paper56_preflight_curved">
+  <compiler angle="degree" coordinate="global" inertiafromgeom="true" />
+  <option integrator="RK4" timestep="0.002" gravity="0 0 -9.81" />
+  <size njmax="500" nconmax="500" />
+  <default>
+    <joint armature="1" damping="1" limited="true" />
+    <geom conaffinity="1" contype="1" condim="1" margin="0.001" solimp=".8 .8 .01" solref=".02 1" />
+    <motor ctrllimited="true" ctrlrange="-1 1" />
+  </default>
+
+  <worldbody>
+    <geom name="floor" type="plane" pos="0 0 0" size="5 5 .125" condim="3" rgba=".48 .53 .60 1" />
+    <geom name="wall_left" type="box" pos="-0.2 0 5" size="2 .125 5" euler="0 0 90" friction="2" condim="3" rgba=".72 .75 .78 1" />
+    <body name="0" pos="0 0 0.08">
+      <inertial pos="0 0 0.08" mass="1" diaginertia=".01 .01 .01" />
+      <joint name="rootx" type="slide" axis="1 0 0" pos="0 0 0.08" armature="0" damping="0" limited="false" />
+      <joint name="rootz" type="slide" axis="0 0 1" pos="0 0 0.08" ref="1.25" armature="0" damping="0" limited="false" />
+      <joint name="0_joint" type="hinge" axis="0 1 0" pos="0 0 1.33" armature="0" damping="0" limited="false" />
+      <geom name="collision_body_0" type="capsule" fromto="0 0 0.08 0.8 0 0.38" size=".05" friction="2" rgba=".78 .24 .22 1" />
+      <body name="1" pos="1 0 0.08">
+        <joint name="1_joint" type="hinge" axis="0 -1 0" pos="0.8 0 0.38" range="-100 20" />
+        <geom name="collision_body_1" type="capsule" fromto="0.8 0 0.38 1.6 0 0.08" size=".05" friction="2" rgba=".20 .62 .35 1" />
+        <body name="11" pos="2 0 0.08">
+          <joint name="11_joint" type="hinge" axis="0 -1 0" pos="1.6 0 0.08" range="-360 360" />
+          <geom name="collision_body_11" type="capsule" fromto="1.6 0 0.08 1.6 0 0.88" size=".05" friction="2" rgba=".22 .42 .78 1" />
+          <body name="111" pos="1.6 0 0.88">
+            <joint name="111_joint" type="hinge" axis="0 -1 0" pos="1.6 0 0.88" range="-360 0" />
+            <geom name="collision_body_111" type="capsule" fromto="1.6 0 0.88 1.6 0 1.68" size=".05" friction="2" rgba=".88 .67 .18 1" />
+            <body name="1111" pos="1.6 0 1.68">
+              <joint name="1111_joint" type="hinge" axis="0 -1 0" pos="1.6 0 1.68" range="-360 360" />
+              <geom name="collision_body_1111" type="capsule" fromto="1.6 0 1.68 0.8 0 1.38" size=".05" friction="2" rgba=".58 .36 .72 1" />
+              <body name="11111" pos="0.8 0 1.38">
+                <joint name="11111_joint" type="hinge" axis="0 -1 0" pos="0.8 0 1.38" range="-100 20" />
+                <geom name="collision_body_11111" type="capsule" fromto="0.8 0 1.38 0 0 1.68" size=".05" friction="2" rgba=".20 .67 .66 1" />
+                <body name="111111" pos="0 0 1.68">
+                  <joint name="111111_joint" type="hinge" axis="0 -1 0" pos="0 0 1.68" range="-360 360" />
+                  <geom name="collision_body_111111" type="capsule" fromto="0 0 1.68 0 0 0.88" size=".05" friction="2" rgba=".94 .48 .21 1" />
+                  <body name="1111111" pos="0 0 0.88">
+                    <joint name="1111111_joint" type="hinge" axis="0 -1 0" pos="0 0 0.88" range="-360 0" />
+                    <geom name="collision_body_1111111" type="capsule" fromto="0 0 0.88 0 0 0.08" size=".05" friction="2" rgba=".18 .48 .73 1" />
+                    <site name="closure_endpoint" pos="0 0 0.08" size=".01" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  <geom name="wall_right" type="box" pos="1.84 0 1.05" size="0.125 2 1.05" euler="0 0 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_000" type="box" pos="1.83939784650954 0 2.12784780695911" size="0.125 2 0.0250064905303254" euler="0 -1.30545150393434 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_001" type="box" pos="1.83688351874378 0 2.18343978397507" size="0.125 2 0.0250571795362695" euler="0 -3.87145730216274 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_002" type="box" pos="1.83195819234414 0 2.23872903875322" size="0.125 2 0.0251521673076678" euler="0 -6.30564907091423 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_003" type="box" pos="1.82482018122543 0 2.29353910390081" size="0.125 2 0.025279579618675" euler="0 -8.52916529980046 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_004" type="box" pos="1.81574804830244 0 2.34772551187977" size="0.125 2 0.0254236916541752" euler="0 -10.4748609035781 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_005" type="box" pos="1.80508244837051 0 2.40117894730292" size="0.125 2 0.0255669913943006" euler="0 -12.0890433772766 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_006" type="box" pos="1.79320730765421 0 2.45382300279429" size="0.125 2 0.0256923466110096" euler="0 -13.331458012675 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_007" type="box" pos="1.78053208017479 0 2.50560863886883" size="0.125 2 0.0257849946352587" euler="0 -14.1740987273217 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_008" type="box" pos="1.76747569559734 0 2.55650773831556" size="0.125 2 0.0258341561892372" euler="0 -14.5995588017415 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_009" type="box" pos="1.75445208227232 0 2.60650773831556" size="0.125 2 0.0258341561892374" euler="0 -14.5995588017416 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_010" type="box" pos="1.74185695610035 0 2.65560863886883" size="0.125 2 0.0257849946352587" euler="0 -14.1740987273215 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_011" type="box" pos="1.73005579690479 0 2.70382300279429" size="0.125 2 0.0256923466110096" euler="0 -13.331458012675 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_012" type="box" pos="1.71937337764402 0 2.75117894730292" size="0.125 2 0.0255669913943006" euler="0 -12.0890433772766 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_013" type="box" pos="1.71008564434202 0 2.79772551187977" size="0.125 2 0.0254236916541752" euler="0 -10.4748609035781 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_014" type="box" pos="1.70241494270768 0 2.84353910390081" size="0.125 2 0.025279579618675" euler="0 -8.52916529980071 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_015" type="box" pos="1.69652934050137 0 2.88872903875322" size="0.125 2 0.0251521673076678" euler="0 -6.30564907091423 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_016" type="box" pos="1.69254599070892 0 2.93343978397507" size="0.125 2 0.0250571795362695" euler="0 -3.87145730216274 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_017" type="box" pos="1.69053726503362 0 2.97784780695911" size="0.125 2 0.0250064905303254" euler="0 -1.30545150393409 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_018" type="box" pos="1.69053726503362 0 3.02215219304089" size="0.125 2 0.0250064905303254" euler="0 1.30545150393409 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_019" type="box" pos="1.69254599070892 0 3.06656021602493" size="0.125 2 0.0250571795362695" euler="0 3.87145730216274 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_020" type="box" pos="1.69652934050137 0 3.11127096124678" size="0.125 2 0.0251521673076678" euler="0 6.30564907091423 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_021" type="box" pos="1.70241494270768 0 3.15646089609919" size="0.125 2 0.025279579618675" euler="0 8.52916529980071 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_022" type="box" pos="1.71008564434202 0 3.20227448812023" size="0.125 2 0.0254236916541752" euler="0 10.4748609035781 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_023" type="box" pos="1.71937337764402 0 3.24882105269708" size="0.125 2 0.0255669913943006" euler="0 12.0890433772766 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_024" type="box" pos="1.73005579690479 0 3.29617699720571" size="0.125 2 0.0256923466110096" euler="0 13.331458012675 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_025" type="box" pos="1.74185695610035 0 3.34439136113117" size="0.125 2 0.0257849946352587" euler="0 14.1740987273215 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_026" type="box" pos="1.75445208227232 0 3.39349226168444" size="0.125 2 0.0258341561892374" euler="0 14.5995588017416 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_027" type="box" pos="1.76747569559734 0 3.44349226168444" size="0.125 2 0.0258341561892372" euler="0 14.5995588017415 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_028" type="box" pos="1.78053208017479 0 3.49439136113117" size="0.125 2 0.0257849946352587" euler="0 14.1740987273217 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_029" type="box" pos="1.79320730765421 0 3.54617699720571" size="0.125 2 0.0256923466110093" euler="0 13.3314580126749 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_030" type="box" pos="1.80508244837051 0 3.59882105269708" size="0.125 2 0.0255669913943008" euler="0 12.0890433772768 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_031" type="box" pos="1.81574804830244 0 3.65227448812023" size="0.125 2 0.0254236916541754" euler="0 10.4748609035781 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_032" type="box" pos="1.82482018122543 0 3.70646089609919" size="0.125 2 0.0252795796186748" euler="0 8.52916529980054 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_033" type="box" pos="1.83195819234414 0 3.76127096124678" size="0.125 2 0.0251521673076678" euler="0 6.30564907091423 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_034" type="box" pos="1.83688351874378 0 3.81656021602493" size="0.125 2 0.0250571795362693" euler="0 3.87145730216277 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_curve_035" type="box" pos="1.83939784650954 0 3.87215219304089" size="0.125 2 0.0250064905303256" euler="0 1.30545150393433 0" friction="2" condim="3" rgba=".72 .75 .78 1" /><geom name="wall_right_upper" type="box" pos="1.84 0 6.95" size="0.125 2 3.05" euler="0 0 0" friction="2" condim="3" rgba=".72 .75 .78 1" /></worldbody>
+
+  <contact>
+    <exclude name="exclude_closure_neighbors" body1="0" body2="1111111" />
+  </contact>
+  <equality>
+    <connect name="kinematic_link" active="true" body1="0" body2="1111111" anchor="0 0 0.08" />
+  </equality>
+
+  <actuator>
+    <motor name="1_joint" joint="1_joint" gear="387.759848" />
+    <motor name="11_joint" joint="11_joint" gear="397.128355" />
+    <motor name="111_joint" joint="111_joint" gear="387.237588" />
+    <motor name="1111_joint" joint="1111_joint" gear="387.759848" />
+    <motor name="11111_joint" joint="11111_joint" gear="397.128355" />
+    <motor name="111111_joint" joint="111111_joint" gear="387.237588" />
+    <motor name="1111111_joint" joint="1111111_joint" gear="387.759848" />
+    <motor name="0_joint" joint="0_joint" gear="387.759848" />
+  </actuator>
+</mujoco>

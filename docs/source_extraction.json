@@ -1,0 +1,47 @@
+{
+  "original_sources_unchanged": true,
+  "source_files": [
+    {
+      "name": "paper_env.py",
+      "sha256": "5c73307e4d42f8a1632c8cc200d0890a59335b763a65664e4579c46dcae8e0b2"
+    },
+    {
+      "name": "parallel_eight_rod_morphology.py",
+      "sha256": "e4ece01e63c31c9a71021c18e6332f750216cc1369ffe1a115a5032d5bcc8f4d"
+    },
+    {
+      "name": "scene_builder.py",
+      "sha256": "7c29fb82d6abe1834a1e5afc58ae278e7dba5978454fe5fd78a99c7c8e438de2"
+    },
+    {
+      "name": "search_proposers.py",
+      "sha256": "5acc772aaf1ea5c1c8477e2b476c1db9381ec4e23b6ca319a7c14ed371bb3268"
+    },
+    {
+      "name": "t2a_task_adapter.py",
+      "sha256": "991c4f324607469271461e2c7b8a7676ab76f7de3fed8f9901c6422ad72f87dd"
+    },
+    {
+      "name": "robomorph_adapter.py",
+      "sha256": "1bf20cbbf940f4f6607f1b4de6651c2374b853ab0a492fdf1b7618dd684abac4"
+    },
+    {
+      "name": "run_search_pilot.py",
+      "sha256": "62731dc0c1927f7bd0b0282638391fc0707a3a2ad7fce2ceac7110721272779a"
+    },
+    {
+      "name": "matrix_worker.py",
+      "sha256": "d65e2d6c3ce2674535927de0c91de30cf6eb616abf45dd8125252ed81a82b3c3"
+    },
+    {
+      "name": "run_t2a_pilot.py",
+      "sha256": "a2bbbb3acab35678d3ebfb22e3b7d5d597d353d025c609eb86a8e5ea336ece3d"
+    }
+  ],
+  "modifications": [
+    "package-relative resource paths",
+    "portable memory/device settings",
+    "independent run entrypoint instead of historical supervisor",
+    "configurable T2A checkpoint milestones; original default retained"
+  ]
+}

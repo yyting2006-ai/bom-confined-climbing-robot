@@ -1,0 +1,8 @@
+numpy==1.26.4
+scipy==1.14.1
+scikit-learn==1.5.2
+mujoco==2.3.3
+gymnasium==0.29.1
+stable-baselines3==2.3.2
+torch==2.5.1
+psutil>=5.9,<8

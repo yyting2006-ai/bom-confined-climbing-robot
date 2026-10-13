@@ -1,0 +1,7 @@
+{
+  "timestep_s": 0.002,
+  "solref": [0.004, 1.0],
+  "solimp": [0.95, 0.99, 0.001],
+  "iterations": 100,
+  "tolerance": 1e-10
+}
